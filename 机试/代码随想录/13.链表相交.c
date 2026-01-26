@@ -36,17 +36,17 @@ ListNode* getIntersectionNode(ListNode *headA, ListNode *headB){
         s = headA;
     }
 
-    //长短链表都有指向的指针了！
-    while(headA || headB){
-        if(headA == headB){
-            return headA;
+    // 让长的链表到达与短的链表离最后一个结点相同的距离
+    while(gap--){
+        l = l->next;
+    }
+
+    while(l){
+        if(l == s){
+            return l;
         }
-        if(headA){
-            headA = headA->next;
-        }
-        if(headB){
-            headB = headB->next;
-        }
+        l = l->next;
+        s = s->next;
     }
 
     return NULL;
