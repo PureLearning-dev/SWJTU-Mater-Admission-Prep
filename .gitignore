@@ -53,3 +53,5 @@ dkms.conf
 
 # debug information files
 *.dwo
+# 忽略所有名为 bin 的文件夹及其内容
+bin/
